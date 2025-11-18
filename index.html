@@ -128,6 +128,54 @@
     .section-about {
       background-color: #0f141a;
     }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-text-block p {
+      margin-bottom: 1rem;
+      color: #d1d5db;
+    }
+
+    .about-list {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+    }
+
+    .about-list li {
+      margin-bottom: 0.5rem;
+      color: #e5e7eb;
+      list-style: disc;
+    }
+
+    .about-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .about-btn {
+      background: #1e293b;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #e6e6e6;
+      transition: background 0.2s ease;
+    }
+
+    .about-btn:hover {
+      background: #334155;
+    }
+
+    .about-image {
+      margin-top: 1.5rem;
+      border-radius: 6px;
+      overflow: hidden;
+    }
     /* CSS:ABOUT-END */
 
 
@@ -182,12 +230,20 @@
         font-size: 2.6rem;
       }
 
-      .section-about .container,
-      .section-projects .container {
+      .section-about .container {
         display: flex;
         flex-direction: row;
         gap: 2rem;
         align-items: flex-start;
+      }
+
+      .about-content {
+        flex: 1;
+      }
+
+      .about-image {
+        flex: 1;
+        margin-top: 0;
       }
     }
     /* CSS:RWD-END */
@@ -236,9 +292,35 @@
       <!-- SECTION:ABOUT-START -->
       <section id="about" class="section section-about" aria-labelledby="about-heading">
         <div class="container">
-          <h2 id="about-heading" class="section-title">關於我（占位內容）</h2>
-          <p>這裡是 About 區的占位內容，未來會透過 Section SDD 產生正式文字、排版與圖片。</p>
-          <p>請開發者之後把新的 section 程式碼「整段」貼在 SECTION:ABOUT-START 與 SECTION:ABOUT-END 之間，完全取代現在這一區。</p>
+          
+          <div class="about-content">
+            <h2 id="about-heading" class="section-title">關於我</h2>
+
+            <div class="about-text-block">
+              <p>我目前主要從事前端開發、教學與自由接案，專長包含 Vue / React、RWD 版型構築、設計到前端的系統化落地，以及協助客戶完成可維護的前端架構。</p>
+
+              <p>我重視清楚的溝通、透明的協作方式，也喜歡把複雜的事情講得更簡單。若你正在找一位能理解需求、保持彈性又能交付品質的人，我會很樂意提供協助。</p>
+            </div>
+
+            <ul class="about-list">
+              <li>協助規劃前端架構與開發流程</li>
+              <li>打造兼具設計感與可維護性的 UI 介面</li>
+              <li>提供前端教學、 mentoring 與程式導讀</li>
+            </ul>
+
+            <div class="about-buttons">
+              <a class="about-btn" href="#projects">查看作品集</a>
+              <a class="about-btn" href="#contact">聯絡我</a>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <img 
+              src="https://source.unsplash.com/800x600/?programmer,developer,code"
+              alt="一位程式開發者正在撰寫程式碼的示意照片"
+              loading="lazy">
+          </div>
+
         </div>
       </section>
       <!-- SECTION:ABOUT-END -->
